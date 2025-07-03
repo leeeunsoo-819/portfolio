@@ -1,0 +1,180 @@
+@media (max-width:767px){
+    html{
+        font-size: 14px;
+    }
+    .hiddenGnb{
+        display: flex;
+        transition: all 0.8s ease 0s;
+        transform: translateX(-100%);
+    }
+    .btnMenu{display: block}
+    header{display: none;}
+
+    .heroImg img{
+        width: 100%;
+        height: 700px;
+        aspect-ratio: 550/700;
+        object-fit: cover;
+    }
+    .heroTitle span{
+        font-size: 65px;
+    }
+
+    #about{
+        margin-top: 1rem;
+    }
+    .floatingHeroTxt{
+        width: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        gap: 0.5rem;
+    }
+    .floatingHeroTxt>h1{
+    font-size: 2rem;
+}
+    .horizontal-line {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.251); /* 원하는 색상 */
+        z-index: 1;
+    }
+    .vertical-line {
+        position: absolute;
+        top: 0;
+        left: 14px;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.251);
+        z-index: 1;
+    }
+    
+    /* ABOUT ME 글자 */
+    .vertical-text {
+        position: absolute;
+        top: 50%;
+        left: -50px; /* 0과 120px 사이 중앙 */
+        transform: translate(-50%, -50%) rotate(-90deg);
+        transform-origin: center center;
+        font-size: 14px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+    .vertical_line_right{
+        display: block;
+    }
+
+    .aboutTxt{
+        width: auto;
+        margin: 0 1.5rem;
+        padding-top: 5rem;
+    }
+    .aboutTitle h1{
+        font-size: 2rem;
+    }
+    .cerEduWrqp{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .skillTxt{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+
+
+
+
+
+
+}
+
+
+@media (max-width:393px){
+    .heroTitle span{
+        font-size: 45px;
+    }
+    /* .aboutTitle h1{
+        font-size: 1rem;
+    } */
+    .floatingHeroTxt>h1 {
+        font-size: 1.5rem;
+    }
+    .skillTxt li{
+        border-radius: 15px;
+    }
+    .cerEdu{
+        flex: initial;
+        width: auto;
+        text-align: center;
+    }
+    .ceList {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+    .ceList dt,
+    .ceList dd{
+        width: auto;
+        word-break: keep-all;
+    }
+    
+    .bannerList figure img{
+        border-radius: 10px;
+    }
+    .bannerTxt {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+    .banTypoColor dl{
+        display: flex;
+        gap: 1rem;
+    }
+    .banTypoColor dt{
+        width: auto;
+        flex: 1;
+    }
+    .banTypoColor dd{
+        flex: 1;
+    }
+    .banTypoColor div{
+        flex: 1;
+    }
+
+    .projTit {
+        margin: 0 1rem;
+    }
+    .innerProj1{
+         margin: 0 1rem;
+    }
+    .contect {
+        text-align: center;
+        margin: 0 1.5rem;
+        margin-bottom: var(--space-large);
+    }
+    .contME{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contME section{
+        width: 200px;
+        border: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.251);
+        padding: 1rem 0;
+    }
+    .contME section:last-of-type{
+        border: 0;
+    }
+}
+@media (max-width:393px){
+    .aboutTitle h1{
+        font-size: 1.5rem;
+    }
+}

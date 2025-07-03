@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{list-style: none;}
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: inherit;
+    font-size: inherit;
+}
+address{
+    font-style: inherit;
+}
+img{
+    max-width: 100%;
+}
+table{
+    border-collapse: collapse;
+}

@@ -1,0 +1,97 @@
+/* 공통적으로 들어가는 스타일 */
+:root{ 
+    /* css에서 변수 설정 하는 것 -- 꼭 해줘야함 */
+    --main-color: #5067E9;
+    --background-color: #FFF9F6;
+    --gray-color: #E5E5EA;
+
+    /* 사이 공간 */
+    --space-x-small: 0.25rem;
+    --space-small: 0.5rem;
+    --space-normal: 1rem;
+    --space-large: 2rem;
+    --space-x-large: 3rem;
+    --space-2x-large: 4rem;
+    --space-3x-large: 5rem;
+    --space-4x-large: 6rem;
+
+    /* 사용할 변수 값 모음 */
+    --f-size-pc: 20px;
+    --f-sixe-tab: 18px;
+    --f-size-mob: 14px;
+
+     /* font size */
+    --heading4: 1rem;
+    --body: 1rem;
+    --detail: 0.9rem;
+    --button: 0.8rem;
+    --gnb: 0.7rem;
+
+}
+html{ 
+    font-size: var(--f-size-pc);
+    /* 1rem = 20px */
+    font-family: "Pretendard",sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--background-color);
+}
+h1{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+p{
+    line-height: 140%;
+}
+
+.commonFrame{
+    width: 1400px;
+    margin: 0 auto;
+    padding-top: 4rem;
+    padding-bottom: 4.5rem;
+}
+
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (max-width:1500px){
+    .commonFrame{
+        width: auto;
+        margin-left: 6rem;
+        margin-right:  2rem;
+    }
+
+}
+@media (max-width:1400px){
+    html{ 
+        font-size: var(--f-sixe-tab);
+    }
+    .commonFrame{
+        width: auto;
+        margin-left: 6rem;
+        margin-right:  2rem;
+    }
+}
+@media (max-width:1024px){}
+@media (max-width:767px){
+    html{ 
+        font-size: var(--f-sixe-mob);
+    }
+    .commonFrame{
+        width: auto;
+        margin: 0 1.5rem;
+        padding-top: 3rem;
+        padding-bottom: 3.5rem;
+    }
+}

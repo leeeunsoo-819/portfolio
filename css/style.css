@@ -1,0 +1,631 @@
+/* 숨겨진 메뉴 */
+.hiddenGnb{
+    position: fixed;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+    font-family: 'ghanachoco';
+}
+.hiddenGnb.on{
+    display: flex;
+    transform: translateX(0%);
+}
+.gnb{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    transition: all 1s ease 0s;
+}
+.gnb>li{
+    margin-bottom: 1rem;
+    transition: all 0.5s ease 0s;
+}
+.gnb>li:hover{
+    color:var(--main-color)
+}
+.gnb>li:last-of-type{
+    margin-bottom: 0;
+}
+.btnClose{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 2rem;
+}
+
+/* 이력서 다운로드 */
+.btnStyle{
+    border: 1px solid #000;
+    padding: 0.5rem 1.5rem;
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--background-color);
+    transition: all 0.5s ease 0s;
+    font-size: var(--button);
+    font-family: 'ghanachoco';
+}
+.btnStyle:hover{
+    background-color: var(--main-color);
+    color: #fff;
+    border: 1px solid var(--main-color);
+}
+.btnStyle svg path{
+    transition: all 0.5s ease 0s;
+}
+.btnStyle:hover svg path{
+    fill: #fff;
+}
+
+/* 메뉴 버튼 */
+.btnMenu{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    line-height: 0;
+    cursor: pointer;
+    display: none;
+    transition: all 1s ease 0s;
+    z-index: 3;
+}
+.btnMenu img{
+    width: 2rem;
+    transition: all 1s ease 0s;
+}
+
+
+/* pc 헤더 */
+header{
+    width: 100%;
+    height: 3rem;
+    filter: drop-shadow(0px 4px 4px #3f3f3f4c);
+    background-color: var(--background-color);
+    z-index: 10000;
+    position: fixed;
+}
+.innerHeader{
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.gnbFloat{
+    display: flex;
+    gap: var(--space-normal);
+    font-size: var(--button);
+    font-weight: 600;
+}
+.gnbFloat li{
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+.gnbFloat li:hover{
+    color: var(--main-color);
+}
+
+
+
+/* 히어로 */
+.hero{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+.heroImg img{
+    width: 100%;
+    height: 700px;
+    aspect-ratio: 1920/700;
+    object-fit: cover;
+}
+.heroTitle span{
+    position: absolute;
+    top: 33.33vh; /* 이미지 높이의 정중앙 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 250px;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+    pointer-events: none;
+    line-height: 1;
+    white-space: nowrap;
+    transition: all 1s ease 0s;
+}
+
+
+.floatingHeroTxt {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 1s ease 0s;
+    margin-top: 2.5rem;
+    z-index: 2; 
+}
+.floatingHeroTxt>h1{
+    font-size: 2.5rem;
+}
+.floatingHeroTxt>h1>span{
+    color: var(--main-color);
+    font-family: "ghanachoco";
+    /* font-family: 'Chosunilbo_myungjo'; */
+}
+
+
+#about{
+    position: relative;
+}
+.horizontal-line {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.251); /* 원하는 색상 */
+
+    z-index: 1;
+}
+.vertical-line {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.251);
+    z-index: 1;
+}
+/* .decoLines .vertical-line {
+    position: fixed;
+    top: 0;
+    left: 100px;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.251);
+    z-index: 1;
+} */
+.vertical_line_right{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    width: 1px;
+    height: 100%;
+   background-color: rgba(0, 0, 0, 0.251); /* 원하는 색상 */
+    z-index: 1;
+    display: none;
+}
+
+/* ABOUT ME 글자 */
+.vertical-text {
+    position: absolute;
+    top: 50%;
+    left: -50px; /* 0과 120px 사이 중앙 */
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transform-origin: center center;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+.aboutMe{
+    padding: 0 4rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.aboutTxt{
+    padding-top: 9rem;
+    padding-bottom: 4.5rem;
+}
+.aboutTitle{
+    font-weight: 600;
+    margin-bottom: var(--space-large);
+    position: relative;
+}
+.aboutTitle p{
+    margin-bottom: 0.5rem;
+}
+.aboutTitle h1{
+    font-size: 2.5rem;
+    font-family: "ghanachoco";
+    margin-bottom: 1rem;
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+}
+.aboutTitle h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 20px;
+    background: url("../img/profileImg/h1line_pc.png") no-repeat 50% 50% / contain;
+    z-index: -1;
+}
+.aboutTitle picture{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    z-index: -1;
+    transform: translate(-50%, 150%);
+}
+.aboutTitle picture img{
+    width: 100%;
+}
+.aboutMeTxt p:nth-of-type(1){
+    margin-bottom: 1rem;
+}
+
+
+.cerEduWrqp{
+    display: flex;
+    gap: 1rem;
+}
+.cerEdu{
+    flex: 1;
+}
+.cerEdu h3{
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    position: relative;
+}
+.cerEdu h3::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 20px;
+    background: url("../img/profileImg/h3line.svg") no-repeat 50% 50% / contain;
+    z-index: -1;
+}
+.ceList{
+    display: flex;
+    flex-wrap: wrap;
+}
+.ceList dt{
+   font-weight: bold;
+    width: 20%;
+    margin-bottom: 1rem; 
+}
+.ceList dd{
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+
+/* 스킬 앤 디벨롭 */
+.skillwrap{
+    position: relative;
+    border-top: 1px solid rgba(0, 0, 0, 0.251);
+}
+.skillTitle{
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.skillTitle h1{
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding: 0 0.5rem;
+    font-family: 'ghanachoco';
+}
+.skillTitle h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 20px;
+    background: url("../img/profileImg/h3line.svg") no-repeat 50% 50% / contain;
+    z-index: -1;
+}
+.skillTitle picture{
+    position: absolute;
+    left: 50%;
+    top: 0.8rem;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.skillTxt{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em 1rem;
+}
+.skillTxt li{
+    background-color: var(--gray-color);
+    padding: 1rem;
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px #ccc;
+}
+.skillTxt li h4{
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* popup */
+.popupWrap{
+    position: relative;
+    border-top: 1px solid rgba(0, 0, 0, 0.251);
+}
+dd[data-color]{
+    display: flex;
+    align-items: center;
+    gap: 0.5;
+}
+dd[data-color] span{
+    /* content:""; */
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+
+.popupTilte{
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.popupTilte h1{
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding: 0 0.5rem;
+    font-family: 'ghanachoco';
+}
+.popupTilte h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 20px;
+    background: url("../img/profileImg/h3line.svg") no-repeat 50% 50% / contain;
+    z-index: -1;
+}
+.popupTilte picture{
+    position: absolute;
+    left: 50%;
+    top: 0.8rem;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.popupStation.swiper{
+    padding-bottom: 1.5rem;
+}
+.popupList figure{
+    margin-bottom: 2rem;
+}
+.popupList img{
+    width: 100%;
+    aspect-ratio: 5/7;
+    object-fit: cover;
+}
+.popupImg img{
+    width: 100%;
+    aspect-ratio: 5/7;
+    object-fit: contain;
+}
+.popupTxt p{
+    margin: 1rem 0;
+}
+.tool{
+    display: flex;
+    gap: 3.25rem;
+    font-size: var(--detail);
+    margin-bottom: 2rem;
+    align-items: center;
+}
+.tool div{
+    display: flex;
+}
+.tool dd{
+    border: 1px solid rgba(0, 0, 0, 0.251);
+    padding: 0.25rem 0.5rem;
+}
+.typoColor{
+    display: flex;
+}
+.typoColor dl{
+    flex: 1;
+}
+.typoColor dt{
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.typoColor dd{
+    margin-bottom: 0.25rem;
+}
+
+
+/* 배너 */
+.bannerStation.swiper{
+    padding-bottom: 1.5rem;
+}
+.bannerWrap{
+    position: relative;
+    border-top: 1px solid rgba(0, 0, 0, 0.251);
+}
+
+.bannerTitle{
+    text-align: center;
+    position: relative;
+    margin-bottom: 3rem;
+}
+.bannerTitle h1{
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding: 0 0.5rem;
+    font-family: 'ghanachoco';
+}
+.bannerTitle h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 20px;
+    background: url("../img/profileImg/h3line.svg") no-repeat 50% 50% / contain;
+    z-index: -1;
+}
+.bannerTitle picture{
+    position: absolute;
+    left: 50%;
+    top: 0.8rem;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+
+.bannerList figure img{
+    border-radius: 1.5rem;
+}
+.bannerList figure{
+    margin-bottom: 2rem;
+}
+.bannerTxt{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.bannerTxt h3{
+    margin-bottom: 1rem;
+}
+.tools{
+    display: flex;
+}
+.tools span{
+    border: 1px solid rgba(0, 0, 0, 0.251);
+    padding: 0.25rem 0.5rem;
+}
+.banTypoColor dt{
+    margin-bottom: 0.5rem;
+}
+.banTypoColor dd{
+    margin-bottom: 0.25rem;
+}
+
+
+/* project */
+.projectWrap{
+    border-top: 1px solid rgba(0, 0, 0, 0.251);
+}
+.project{
+    transition: all 1s ease 0s;
+}
+.projTit{
+    padding: 6rem 0;
+}
+.stickyMenu{
+    position: sticky;
+    top: 5rem;
+    left: 0;
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-content: center;
+}
+.sm2>li{
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 1px solid #3888dd;
+    background-color: #fff;
+    color: #3888dd;
+}
+.sm1>li{
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #C88A64;
+    border: 1px solid #C88A64;
+}
+.imgall{
+    min-height: 2000px;
+    text-align: center;
+}
+.imgall img{
+    width: 100%;
+}
+.stickyMenu.commonFrame{
+    padding-top: 0;
+}
+.project2{
+    text-align: center;
+    margin-bottom: var(--space-4x-large);
+}
+.project2 h2{
+    margin-bottom: 1rem;
+}
+
+
+/* 컨택트 */
+.contectWrap{
+    position: relative;
+    border-top: 1px solid rgba(0, 0, 0, 0.251);
+    padding: 10rem 0;
+}
+.contect{
+    text-align: center;
+    margin-bottom: var(--space-4x-large);
+}
+.contect h1{
+    font-family: 'ghanachoco';
+    font-size: 3rem;
+    margin-bottom: var(--space-x-large);
+}
+.contect h2{
+    color: var(--main-color);
+    margin-bottom: var(--space-normal);
+}
+.contME{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.contME h4{
+    font-weight: 700;
+}
+.contME section h4{
+    margin-bottom: 1rem;
+}
+.contME section{
+    border-right: 1px solid rgba(0, 0, 0, 0.251);
+    padding: 1rem 3rem;
+}
+.contME section:last-of-type{
+    border: 0;
+}
+.cont1{
+    display: flex;
+    justify-content: center;
+    gap: var(--space-normal);
+}
+.cont1 dt{
+    font-weight: 700;
+}

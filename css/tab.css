@@ -1,0 +1,56 @@
+@media (max-width:1400px){
+    html{
+        font-size: 18px;
+    }
+    .innerHeader{
+        width: 100%;
+        padding: 0 2rem;
+        box-sizing: border-box;
+    }
+    .heroTitle span{
+        font-size: 171px;
+    }
+    .floatingHeroTxt{
+        width: auto;
+        padding: 2rem;
+        margin-top: 0;
+    }
+
+    .about{
+        margin-top: 1rem;
+    }
+    .aboutMe{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 4rem;
+    }
+
+    .aboutTitle p{
+        margin-bottom: 0.5rem;
+    }
+    .aboutTitle h1{
+        font-size: 2rem;
+    }
+    .aboutTitle picture{
+        transform: translate(-50%, 120%);
+    }
+    .aboutTitle picture img{
+        width: 550px;
+    }
+
+}
+
+
+@media (max-width:1024px){
+    .hiddenGnb{
+        display: flex;
+        transition: all 0.8s ease 0s;
+        transform: translateX(-100%);
+    }
+    .btnMenu{display: block}
+    header{display: none;}
+
+
+
+
+}
