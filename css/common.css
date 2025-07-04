@@ -65,7 +65,7 @@ p{
     font-style: normal;
 }
 
-@media (max-width:1500px){
+@media (max-width:1650px){
     .commonFrame{
         width: auto;
         margin-left: 6rem;
