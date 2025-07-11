@@ -591,8 +591,9 @@ dd[data-color] span{
     min-height: 2000px;
     text-align: center;
 }
-.imgall img{
+.imgall img {
     width: 100%;
+    max-width: 1920px;
 }
 .stickyMenu.commonFrame{
     padding-top: 0;
@@ -643,10 +644,11 @@ dd[data-color] span{
 .contME section:last-of-type{
     border: 0;
 }
-.cont1{
+.cont1 {
     display: flex;
     justify-content: center;
     gap: var(--space-normal);
+    flex-direction: column;
 }
 .cont1 dt{
     font-weight: 700;

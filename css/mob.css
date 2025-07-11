@@ -7,6 +7,10 @@
         transition: all 0.8s ease 0s;
         transform: translateX(-100%);
     }
+    .imgall img {
+        width: auto;
+        max-width: 100%;
+    }
     .btnMenu{display: block}
     header{display: none;}
 
@@ -89,12 +93,20 @@
         border-radius: 5px;
     }
 
+    .contME section {
+        width: 200px;
+        border: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.251);
+        padding: 1rem 0;
+    }
 
 
 
 
-
-
+    .contME{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
@@ -162,10 +174,7 @@
         margin: 0 1.5rem;
         margin-bottom: var(--space-large);
     }
-    .contME{
-        flex-direction: column;
-        align-items: center;
-    }
+
     .contME section{
         width: 200px;
         border: 0;
