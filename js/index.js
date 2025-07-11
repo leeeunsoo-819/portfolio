@@ -76,10 +76,22 @@ document.addEventListener("DOMContentLoaded",function(){
         });
 
         // 모든 section 요소에 observer 적용
-        document.querySelectorAll('.txtAni').forEach(section => {
+        document.querySelectorAll('.txtAni,.ltr').forEach(section => {
             observer.observe(section);
         });
+        const ht_txt = document.querySelector(".ht_txt")
+        const ht_txtSpan = document.querySelector(".ht_txt span")
+        const imgHero = document.querySelector(".heroImg img")
+        let base1 = 400
+        let base2 = 120
 
+        window.addEventListener("scroll",()=>{
+            let scroll = window.scrollY
+            console.log(scroll)
+            imgHero.style.transform = `scale(${1-scroll/500})`
+            ht_txt.style.color = `rgb(${255 - (scroll/base1*255)} ${255 - (scroll/base1*255)} ${255 - (scroll/base1*255)})`
+            ht_txtSpan.style.letterSpacing = `${-10 + (scroll/10)}px`
+        })
 
 
     

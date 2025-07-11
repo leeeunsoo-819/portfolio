@@ -50,7 +50,10 @@
     .btnMenu{display: block}
     header{display: none;}
 
-
-
+    .contWrap{
+        width: auto;
+        margin-left: 7rem;
+        margin-right: 1rem;
+    }
 
 }

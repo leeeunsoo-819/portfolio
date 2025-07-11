@@ -118,32 +118,41 @@ header{
 
 
 /* 히어로 */
-.hero{
+.innerWrap{
+    background-color: var(--background-color);
+}
+.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
-.heroImg img{
+.heroImg img {
     width: 100%;
-    height: 650px;
-    aspect-ratio: 1920/650;
+    height: 800px;
+    aspect-ratio: 1920/800;
     object-fit: cover;
+    transform: scaleX(1);
 }
-.heroTitle{
+.heroTitle {
     position: relative;
+    position: sticky;
+    top: 0px;
+    z-index: -1;
 }
-.ht_txt{
+.ht_txt {
     position: absolute;
     top: 33.33vh;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #fff;
+    color: rgb(255 255 255);
 }
-.ht_txt span{
+.ht_txt span {
     font-size: 250px;
     font-weight: 600;
     line-height: 100%;
+    letter-spacing: -10px;
 }
 /* .heroTitle span{
     position: absolute;
@@ -600,7 +609,6 @@ dd[data-color] span{
 }
 .project2{
     text-align: center;
-    margin-bottom: var(--space-4x-large);
 }
 .project2 h2{
     margin-bottom: 1rem;
@@ -612,6 +620,8 @@ dd[data-color] span{
     position: relative;
     border-top: 1px solid rgba(0, 0, 0, 0.251);
     padding: 10rem 0;
+    background-color: var(--background-color);
+    z-index: 10;
 }
 .contect{
     text-align: center;
@@ -652,4 +662,15 @@ dd[data-color] span{
 }
 .cont1 dt{
     font-weight: 700;
+}
+
+
+.ltr{
+    transform: translateX(-1rem);
+    opacity: 0;
+    transition:all .7s ease 0s;
+}
+.ltr.on{
+    transform: translateX(0rem);
+    opacity: 1;
 }

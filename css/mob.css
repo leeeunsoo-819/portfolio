@@ -107,6 +107,10 @@
         flex-direction: column;
         align-items: center;
     }
+    .contWrap{
+        width: auto;
+        margin: 0 1rem;
+    }
 }
 
 
