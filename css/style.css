@@ -193,7 +193,9 @@ header{
     /* font-weight: 700; */
 }
 
-
+main{
+    overflow: hidden;
+}
 #about{
     position: relative;
     margin-top: 2rem;
